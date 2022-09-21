@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Select, SelectOption } from "./Select";
+import styles from "./app.module.css";
 
 const options = [
   { label: "first", value: 1 },
@@ -14,7 +15,7 @@ function App() {
   const [value2, setValue2] = useState<SelectOption | undefined>(options[0]);
 
   return (
-    <>
+    <main className={styles.main}>
       <h1>Select Components</h1>
       <br />
       <h2>Multiple Select</h2>
@@ -35,7 +36,7 @@ function App() {
           setValue2(o);
         }}
       />
-    </>
+    </main>
   );
 }
 
